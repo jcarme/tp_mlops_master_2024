@@ -41,7 +41,7 @@ conda create --name mlops python=3.11
 conda activate mlops
 ```
 
-A chaque nouveau package python dont vous aurez besoin dans votre projet, ajoutez le dans le _requirements.txt_. Vous pou
+A chaque nouveau package python dont vous aurez besoin dans votre projet, ajoutez le dans le _requirements.txt_.
 
 
 ## Récupération des données

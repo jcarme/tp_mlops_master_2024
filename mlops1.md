@@ -88,7 +88,7 @@ Créez un Pipeline scikit-learn contenant à la fois le prétraitement et la cr�
 Testez différents paramétrages de l'algorithme LogisticRegression. Vous pouvez en particulier jouer avec les paramêtres _C_ et _penalty_.
 Testez différents algorithmes d'apprentissage, par exemple _SVC_ et _MLP_, et cherchez à tester différents hyperparamètres. Par exemple, vous pouvez tester plusieurs structure de réseau en _MLP_.
 
-Chaque expérimentation soit être précédée d'un paragraphe explicatif. Une description textuelle courte doit également être sauvegardée dans MLFlow.
+Chaque expérimentation soit être précédée d'un paragraphe explicatif.
 
 
 ## Optimisation des hyper parametres

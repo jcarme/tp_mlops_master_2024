@@ -36,7 +36,7 @@ Créer un notebook `model_design_2.ipynb` qui reprend la création d'un modèle 
 
 Une fois l'autolog effectué, executez votre notebook (en laissant pour l'instant de côté la partie _hyperopt_), consulter l'interface MLFlow et regardez ce qui a été loggué.
 
-Le point clef est la **reproductibilité**. Nous voulons sauvegarder dans l _run_ l'ensemble des éléments qui pourront nous permettre de reproduire l'expérience.
+Le point clef est la **reproductibilité**. Nous voulons sauvegarder dans le _run_ l'ensemble des éléments qui pourront nous permettre de reproduire l'expérience.
 
 Voici la liste des éléments à sauvegarder:
   * Identification du code source, branche, commit sous forme de tags

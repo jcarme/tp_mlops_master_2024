@@ -27,7 +27,7 @@ Le server sera accessible à l'adresse http://localhost:5000
 
 ### Logging des paramètres
 
-Créer un notebook `model_design_2.ipynb` qui reprend la création d'un modèle (que vous choisierez) tel qu'effectuée dans le TP précédent, en y ajoutant les éléments suivants:
+Créer un notebook `model_design_2.ipynb` qui reprend la création d'un modèle (que vous choisirez) tel qu'effectuée dans le TP précédent, en y ajoutant les éléments suivants:
 * Connection au server MLFlow
 * Activation de l'_autolog_ de MLFlow.sklearn
 * Création de l'_experiment_ MLFlow

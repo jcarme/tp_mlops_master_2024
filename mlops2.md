@@ -62,7 +62,7 @@ Depuis la page principale, une fois votre expérience choisie, allez dans l'ongl
 
 Vous pouvez ensuite cliquer sur un run donné et analyser l'ensemble des paramètres et métriques associées. Vérifiez que toutes les informations souhaitée sont bien là. 
 
-Vous noterez qu'il est également possible de modifier les informations manuellement, depuis l'interface MLFlow. Vous pouvez par exemple ajouter une _description_, texte libre décrivant le run, ou ajouter des _tags_. 
+Vous noterez qu'il est également possible de modifier les informations manuellement, depuis l'interface MLFlow. 
 
 ## MLFLow Registry
 

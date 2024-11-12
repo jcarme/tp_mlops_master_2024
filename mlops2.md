@@ -74,7 +74,7 @@ Enregistrez votre modèle dans MLFlow programmatiquement (il est également poss
 
 Associez également une description et un ou plusieurs _tags_ à votre modèle. Ces fonctionnalité ne sont possible qu'en ayant instancié un objet `MLFlowClient`.
 
-Allez ensuite dans votre interface MLFlow pour visualiser votre modèle enriegistré. Vous noterez que les paramètres et les métriques ne sont pas directement associés au modèle. Elle le sont au _run_ qui a créé le modèle. Vous pouvez donc les retrouver en cliquant, depuis la page de la version choisie de votre modèle, sur `source_run` .
+Allez ensuite dans votre interface MLFlow pour visualiser votre modèle enregistré. Vous noterez que les paramètres et les métriques ne sont pas directement associés au modèle. Elle le sont au _run_ qui a créé le modèle. Vous pouvez donc les retrouver en cliquant, depuis la page de la version choisie de votre modèle, sur `source_run` .
 
 
 ## Conception d'une fonction d'expérimentation

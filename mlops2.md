@@ -58,9 +58,11 @@ Ajoutez au moins une métrique pertinente d'évaluation de votre modèle.
 ### Consultation du server MLFlow
 
 Prenez le temps maintenant de bien analyser l'ensemble des informations stockées dans MLFlow.
-Depuis la page principale, une fois votre expérience choisie, allez dans l'onglet _table_, et ajoutez les informations manquantes, en particulier _source_, _version_, ainsi qu'une ou deux métrique bien choisie.
+Depuis la page principale, une fois votre expérience choisie, allez dans l'onglet _table_, et affichez les informations manquantes (bouton _columns_), en particulier _source_, _version_, ainsi qu'une ou deux métrique bien choisie.
 
-Vous pouvez ensuite cliquer sur un run donné et analyser l'ensemble des paramètres et métriques associées. Vérifiez que toutes les informations souhaitée sont bien là.
+Vous pouvez ensuite cliquer sur un run donné et analyser l'ensemble des paramètres et métriques associées. Vérifiez que toutes les informations souhaitée sont bien là. 
+
+Vous noterez qu'il est également possible de modifier les informations manuellement, depuis l'interface MLFlow. Vous pouvez par exemple ajouter une _description_, texte libre décrivant le run, ou ajouter des _tags_. 
 
 ## MLFLow Registry
 
@@ -119,7 +121,7 @@ En utilisation les fonctionnalités de l'interface, adaptez la tableau de bord �
 
 ## Optimisation des hyperparametres 
 
-### Adaptation de la fonction de construiction des modèles
+### Adaptation de la fonction de construction des modèles
 
 Créez une fonction `build_optimized_model` la capacité de trouver les hyper parametres optimaux au moyen de la bibliothèque `hyperopt`. Pour plus de détails, consultez la section "Optimisation des hyper-paramètres" du TP précédent.
 
@@ -133,7 +135,7 @@ Enfin, une fois le paramétrage optimal trouvé, le modèle final doit être rec
 
 Adaptez le logging MLFlow en conséquence. Créez un nouveau run à chaque étape, c'est à dire au sein de la fonction `objective`.
 
-**Selon vos, quelle métrique est pertinente à logguer pour chaque étape de l'optimisation?**
+**Selon vous, quelle métrique est pertinente à logguer pour chaque étape de l'optimisation?**
 
 Comme vous allez générer ainsi un nombre important de runs, il est important d'utiliser des tags pour vous y retrouver dans l'interface MLFlow. Par exemple, vous pouvez utiliser les tags suivants:
 - `hyperopt_candidate=True` pour les modèles générés par _hyperopt_ lors de sa recherche

@@ -47,7 +47,7 @@ Voici la liste des éléments à sauvegarder:
 
 Pour chacun de ces éléments, vérifiez si il est déjà sauvegardé par _autolog_, et dans le cas contraire, ajouter un logging manuel.
 
-Dans le cas du nom du code source, du tag et du commit, _autolog_ ne fonctionne pas correctement du fait de l'utilisation d'un notebook. Stockez les donc manuellement sous forme de tags `mlflow.source.name`, `mlflow.source.git.commit` et `mlflow.source.git.commit`.
+Dans le cas du nom du code source, du tag et du commit, _autolog_ ne fonctionne pas correctement du fait de l'utilisation d'un notebook. Stockez les donc manuellement sous forme de tags `mlflow.source.name`, `mlflow.source.git.commit` et `mlflow.source.git.branch`.
 
 ### Logging des métriques
 

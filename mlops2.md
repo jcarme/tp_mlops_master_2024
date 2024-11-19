@@ -27,7 +27,7 @@ Le server sera accessible à l'adresse http://localhost:5000
 
 ### Logging des paramètres
 
-Créer un notebook `model_design_2.ipynb` qui reprend la création d'un modèle (que vous choisierez) tel qu'effectuée dans le TP précédent, en y ajoutant les éléments suivants:
+Créer un notebook `model_design_2.ipynb` qui reprend la création d'un modèle (que vous choisirez) tel qu'effectuée dans le TP précédent, en y ajoutant les éléments suivants:
 * Connection au server MLFlow
 * Activation de l'_autolog_ de MLFlow.sklearn
 * Création de l'_experiment_ MLFlow
@@ -36,7 +36,7 @@ Créer un notebook `model_design_2.ipynb` qui reprend la création d'un modèle 
 
 Une fois l'autolog effectué, executez votre notebook (en laissant pour l'instant de côté la partie _hyperopt_), consulter l'interface MLFlow et regardez ce qui a été loggué.
 
-Le point clef est la **reproductibilité**. Nous voulons sauvegarder dans l _run_ l'ensemble des éléments qui pourront nous permettre de reproduire l'expérience.
+Le point clef est la **reproductibilité**. Nous voulons sauvegarder dans le _run_ l'ensemble des éléments qui pourront nous permettre de reproduire l'expérience.
 
 Voici la liste des éléments à sauvegarder:
   * Identification du code source, branche, commit sous forme de tags
@@ -47,7 +47,7 @@ Voici la liste des éléments à sauvegarder:
 
 Pour chacun de ces éléments, vérifiez si il est déjà sauvegardé par _autolog_, et dans le cas contraire, ajouter un logging manuel.
 
-Dans le cas du nom du code source, du tag et du commit, _autolog_ ne fonctionne pas correctement du fait de l'utilisation d'un notebook. Stockez les donc manuellement sous forme de tags `mlflow.source.name`, `mlflow.source.git.commit` et `mlflow.source.git.commit`.
+Dans le cas du nom du code source, du tag et du commit, _autolog_ ne fonctionne pas correctement du fait de l'utilisation d'un notebook. Stockez les donc manuellement sous forme de tags `mlflow.source.name`, `mlflow.source.git.commit` et `mlflow.source.git.branch`.
 
 ### Logging des métriques
 
@@ -58,9 +58,11 @@ Ajoutez au moins une métrique pertinente d'évaluation de votre modèle.
 ### Consultation du server MLFlow
 
 Prenez le temps maintenant de bien analyser l'ensemble des informations stockées dans MLFlow.
-Depuis la page principale, une fois votre expérience choisie, allez dans l'onglet _table_, et ajoutez les informations manquantes, en particulier _source_, _version_, ainsi qu'une ou deux métrique bien choisie.
+Depuis la page principale, une fois votre expérience choisie, allez dans l'onglet _table_, et affichez les informations manquantes (bouton _columns_), en particulier _source_, _version_, ainsi qu'une ou deux métrique bien choisie.
 
-Vous pouvez ensuite cliquer sur un run donné et analyser l'ensemble des paramètres et métriques associées. Vérifiez que toutes les informations souhaitée sont bien là.
+Vous pouvez ensuite cliquer sur un run donné et analyser l'ensemble des paramètres et métriques associées. Vérifiez que toutes les informations souhaitée sont bien là. 
+
+Vous noterez qu'il est également possible de modifier les informations manuellement, depuis l'interface MLFlow. 
 
 ## MLFLow Registry
 
@@ -72,7 +74,7 @@ Enregistrez votre modèle dans MLFlow programmatiquement (il est également poss
 
 Associez également une description et un ou plusieurs _tags_ à votre modèle. Ces fonctionnalité ne sont possible qu'en ayant instancié un objet `MLFlowClient`.
 
-Allez ensuite dans votre interface MLFlow pour visualiser votre modèle enriegistré. Vous noterez que les paramètres et les métriques ne sont pas directement associés au modèle. Elle le sont au _run_ qui a créé le modèle. Vous pouvez donc les retrouver en cliquant, depuis la page de la version choisie de votre modèle, sur `source_run` .
+Allez ensuite dans votre interface MLFlow pour visualiser votre modèle enregistré. Vous noterez que les paramètres et les métriques ne sont pas directement associés au modèle. Elle le sont au _run_ qui a créé le modèle. Vous pouvez donc les retrouver en cliquant, depuis la page de la version choisie de votre modèle, sur `source_run` .
 
 
 ## Conception d'une fonction d'expérimentation
@@ -119,7 +121,7 @@ En utilisation les fonctionnalités de l'interface, adaptez la tableau de bord �
 
 ## Optimisation des hyperparametres 
 
-### Adaptation de la fonction de construiction des modèles
+### Adaptation de la fonction de construction des modèles
 
 Créez une fonction `build_optimized_model` la capacité de trouver les hyper parametres optimaux au moyen de la bibliothèque `hyperopt`. Pour plus de détails, consultez la section "Optimisation des hyper-paramètres" du TP précédent.
 
@@ -133,7 +135,7 @@ Enfin, une fois le paramétrage optimal trouvé, le modèle final doit être rec
 
 Adaptez le logging MLFlow en conséquence. Créez un nouveau run à chaque étape, c'est à dire au sein de la fonction `objective`.
 
-**Selon vos, quelle métrique est pertinente à logguer pour chaque étape de l'optimisation?**
+**Selon vous, quelle métrique est pertinente à logguer pour chaque étape de l'optimisation?**
 
 Comme vous allez générer ainsi un nombre important de runs, il est important d'utiliser des tags pour vous y retrouver dans l'interface MLFlow. Par exemple, vous pouvez utiliser les tags suivants:
 - `hyperopt_candidate=True` pour les modèles générés par _hyperopt_ lors de sa recherche

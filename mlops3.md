@@ -103,6 +103,8 @@ Ecrivez la fonction `main` dans un fichier source `predict.py` mais implémentez
 
 Créez un _entry point_ dans votre package pour votre commande `predict`.
 
+Testez votre script sur différents messages.
+
 ### Promotion
 
 #### Ajouter les tests dans le package
@@ -136,6 +138,8 @@ A noter que:
 - Un modèle ne peut être promu en `prod` que s'il passe les tests précédemment définis.
 
 Créez un _entry point_ dans votre package pour votre commande `promote`.
+
+Testez la promotion d'un de vos modèles en "staging" puis en "production", vérifiez que les tests sont bien effectués pour le passage en "production", et vérifiez que le server MLFlow reflète son status.
 
 ### Réapprentissage
 

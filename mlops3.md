@@ -1,12 +1,5 @@
 # Tests, scripts, automatisation
 
-## Makefile
-
-Vous allez créer un Makefile pour automatiser certaines tâches liées à votre projet:
-- `build_dev_requirements`: compile votre fichier `requirements.in` en `requirements.txt`
-- `install_dev_requirements`: installe les dépendances définies dans le fichier `requirements.txt`
-- `install`: install votre package, lorsque vous le créerez dans la suite de ce TP
-
 ## Tests
 
 Vous allez commencer par écrire un jeu de test fondé sur le _framework_ `pytest`, qui sera executé sur chaque modèle avant qu'il ne puisse être passé en production.
@@ -91,8 +84,6 @@ Vous pouvez ensuite installer le package avec la commande suivante:
 ```
 pip install -e .
 ```
-
-Mettez votre `Makefile` à jour.
 
 ### Prediction 
 

@@ -124,7 +124,7 @@ test_result = subprocess.run(
 
 #### Implémenter le script
 
-Créez un script `promote.sh` qui promeut un modèle dans le registre MLFlow.
+Créez dans votre package une commande `promote` qui promeut un modèle dans le registre MLFlow.
 
 Il doit prendre en paramètre ces arguments :
 

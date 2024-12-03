@@ -41,7 +41,7 @@ Dans le répertoire `src/frontend` vous allez créer un `Dockerfile` pour votre 
 Nous allons maintenant utiliser _docker-compose_ pour pouvoir déployer l'ensemble de l'application en une commande.
 
 Créer à la racine de votre projet un fichier `docker-compose.yml` définissant deux services différents:
-- Le service `webapp`. Ce service doit utiliser l'image déjà créée `sentiment-analyzer:<VERSION>`. La version (et eventuellement le nom de l'image) doivent être passés en variable d'environnement. Pas de section `build`.
+- Le service `webapp`. Ce service doit utiliser l'image déjà créée `sentiment-analyzer:<VERSION>`. La version (et eventuellement le nom de l'image) doivent être passés en variable d'environnement, que nous nommerons PREDICTION_CONTAINER. Pas de section `build`.
 - Le service `frontend`. La section correspondante doit contenir une parametre `build` faisant référence au repertoire source du `frontend` ainsi qu'un parametre `ports` décrivant la redirection d'un port de votre _host_ vers le port _streamlit_ du conteneur `frontend`.
 
 Pour compiler l'ensemble des conteneur requis (dans ce cas, uniquement `frontend`):
@@ -51,7 +51,7 @@ docker-compose build
 
 Pour executer l'application:
 ```
-PREDICTON_CONTAINER="sentiment-analyzer:<YOUR_VERSION>" docker-compose up
+PREDICTION_CONTAINER="sentiment-analyzer:<YOUR_VERSION>" docker-compose up
 ```
 
 ## Stockage de l'activité dans MongoDB (optionnel)
